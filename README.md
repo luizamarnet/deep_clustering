@@ -59,4 +59,4 @@ Last, also considering the 5-folds cross-validation while traing the deep cluste
 ## Comments
 
 As we see in the results, the deep clustering huge improved the results of the clusterization of the MNIST dataset. <br/>
-Nevertheless, the models perfomed better in the deep clustering models trained with some of the pre trained encoders and get confused between '4' and '9' numbers in others. Maybe, improving the results of the autoencoders from which the encoders were taken could solve this problem.
+Nevertheless, the models perfomed better in the deep clustering models trained with some of the pre trained encoders and get confused between some numbers in others. Maybe, improving the results of the autoencoders from which the encoders were taken could solve this problem.

@@ -1,13 +1,18 @@
-# Convolutional Autoencoder Project
+# Deep Clustering Project
 
-The aim of this project is to develop a convolutional autoencoder for imagens. <br/>
-The encoder part of the model will be used later in a model to clusterize images.
+The aim of this project is to cluter imagens using deep models. <br/>
+The models trained in the 'autoencoder' repository will be used in this project.
 
 ## About the Project
 
 The models were developed in Python using Keras.<br/>
 The models were validated using 5-folds cross-validation and all of them were tested on the same dataset.<br/>
-As examples, we trained the autoencoder with 2 datasets: CIFAR-10 and MNIST.
+As examples, we trained the autoencoder with 2 datasets: CIFAR-10 and MNIST.<br/>
+For each dataset three steps will be carried out.
+* The images will be flattened and clusterized using k-means;
+* Each image will be inserted into the encoder derived from the autoendores of the other project. The output of the encoder will be clustered using k-means.
+* A clustering layer is placed on the top of the encoder model and the new model is trained as a self supervised model. This is the deep clusterinig model developed.
+As the autoencoder model was trained with 5-folds cross-validation, the 5 models will be used here. This way, the clusterization using the putpout of the encoder will be done 5 times and 5 deep clustering models will be traied. Model over, the training part of each clusterization will be caried out with the respective subsets used in the traing of each autoendor during the cross-validation, and the same subset of images will be used as test dataset. Hence, the tests realized and the comparison between the models are fair.
 
 ## About the Training
 In both examples, the models were trained with backpropagation using Adam  algorithm.<br/>

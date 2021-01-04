@@ -28,47 +28,25 @@ Also, the labels used while training the deep clustering are updated after some 
 
 Up to now, only the MNIST dataset was used in this project. The results obtained until now are presented below.<br/>
 Although the true labels of the classes are not used during any part of the training, once it is a cluserization problem, they are used to avaliate the results and analyse if the model is able to separete the clusters according to the known classes. <br/>
-The confusion matrix above shows the true labels against the clusterization resulted from flattening the image and apply k-means. Considering the class of each clustering as the majority class of the cluster, the accuracy obtained for the test dataset was: 
+The confusion matrix above shows the true labels against the clusterization resulted from flattening the image and apply k-means. Considering the class of each clustering as the majority class of the cluster, the accuracy obtained for the test dataset was: 59.41000 %.
+![confusionMatrix_originalImage](https://user-images.githubusercontent.com/58445878/103501716-cd500380-4e2d-11eb-8139-65201d731444.jpg)
+Next, using the outputs of the encoder and clusterizing then, the results were improved. Remembering that we used 5-folds cross-validation while training the autoencoders, the same 5 encoders were used here. This way, the new accurecy for the clusterization, testing the five encoders, was 87.22600 % with standard deviation equal to 3.13242 %. The two confusion matrix below show the results of the clusterization of the outputs of 2 of the 5 encoders.
+
+![confusionMatrix_encodedImage_CNN_0](https://user-images.githubusercontent.com/58445878/103501970-94fcf500-4e2e-11eb-8c87-a1cad7d894b7.jpg)
+
+![confusionMatrix_encodedImage_CNN_1](https://user-images.githubusercontent.com/58445878/103502006-acd47900-4e2e-11eb-9004-22be10bf261e.jpg)
 
 
-
-The models consist of some blocks of convolutional, activation and batch normalization layers and blocks of fully connected (dense) layers. The output of the encoder part of model trained with the CIFAR-10 dataset is an array with size 128x1. The autoencoder trained with the MNIST dataset was a little changed, so that the output size of encoder part could have the same size as the numeber of known classes of this dataset (that is, an array of size 10x1).<br/>
-For shrinking and increasing the height and width of the data throughout the model it was used max pooling and up sampling with nearest neighbour interpolation, respectively. All the convolutions were made using same padding.  <br/>
-The figures below show the models developed and the legend that explains what each layer is.<br/>
-In the image, the data flows from the left to the right. This way, the left grey box represents the original image and the right grey box representes the reconstructed one. 
-
-#### Model trained with MNIST dataset
-
-![model flowchart - mnist](https://user-images.githubusercontent.com/58445878/103463149-0cd0ff80-4d09-11eb-8957-a0079d98d89e.png)
-
-#### Model trained with CIFAR-10 dataset
-
-![model flowchart - cifar10](https://user-images.githubusercontent.com/58445878/103463163-1fe3cf80-4d09-11eb-9375-a5f42160ac97.png)
-
-#### Legend
-
-<img src="https://user-images.githubusercontent.com/58445878/103463169-2b36fb00-4d09-11eb-80e9-b5bff48420d7.png" width="600">
+Last, also considering the 5-folds cross-validation while traing the deep clustering models, the accuracy for the clusterization with the deep model was 93.47000 %, with standard deviation equal to 4.35613 %. The confusion matrix below show the results founded when training the deep clustering model with 2 of the 5 pre trained encoders.
 
 
-## Results
+![confusioMatrix_KerasDeepClusteringModel_0](https://user-images.githubusercontent.com/58445878/103502142-12286a00-4e2f-11eb-8614-cbfa0cc44f8c.jpg)
 
-The images belows show 25 images of each dataset chosed randomely from the test datasets of each dataset (CIFAR-10 / MNIST) and their reconstruction with by one of the models trained in the crossvalidation for each dataset. The graphics for the mean squared error evolution during the training are also presented.
+![confusioMatrix_KerasDeepClusteringModel_0](https://user-images.githubusercontent.com/58445878/103502146-15235a80-4e2f-11eb-88a7-30b4064040c5.png)
 
-#### Results of the model trained with MNIST dataset
+## Steps Concluded and Future Works
 
-![examples_originalImagens](https://user-images.githubusercontent.com/58445878/103464279-32fa9d80-4d11-11eb-9ad6-9ea8cd79f6d8.jpg)
 
-![examples_ReconstructedImagens_NN0](https://user-images.githubusercontent.com/58445878/103464281-355cf780-4d11-11eb-9864-664fc3c75d93.jpg)
-
-![Encoder_TrainHistory_loss_0](https://user-images.githubusercontent.com/58445878/103463429-122f4980-4d0b-11eb-94f7-f018b1e41191.jpg)
-
-#### Results of the model trained with CIFAR-10 dataset
-
-![examples_originalImagens](https://user-images.githubusercontent.com/58445878/103464293-50c80280-4d11-11eb-90f5-24bbf12864ab.jpg)
-
-![examples_ReconstructedImagens_NN0](https://user-images.githubusercontent.com/58445878/103464297-53c2f300-4d11-11eb-8fa5-2c2a273c9810.jpg)
-
-![Encoder_TrainHistory_Mean_Squared_Error_0](https://user-images.githubusercontent.com/58445878/103463473-60dce380-4d0b-11eb-84ee-46b982e8caf6.jpg)
 
 
 ## Comments

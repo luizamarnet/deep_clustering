@@ -1,7 +1,7 @@
 # Deep Clustering Project
 
 The aim of this project is to cluter imagens using deep models. <br/>
-The models trained in the 'autoencoder' repository will be used in this project.
+The models trained in the [autoencoder](https://github.com/luizamarnet/autoencoder) repository will be used in this project.
 
 ## About the Project
 

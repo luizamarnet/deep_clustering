@@ -29,20 +29,22 @@ Also, the labels used while training the deep clustering are updated after some 
 Up to now, only the MNIST dataset was used in this project. The results obtained until now are presented below.<br/>
 Although the true labels of the classes are not used during any part of the training, once it is a cluserization problem, they are used to avaliate the results and analyse if the model is able to separete the clusters according to the known classes. <br/>
 The confusion matrix above shows the true labels against the clusterization resulted from flattening the image and apply k-means. Considering the class of each clustering as the majority class of the cluster, the accuracy obtained for the test dataset was: 59.41000 %.
-![confusionMatrix_originalImage](https://user-images.githubusercontent.com/58445878/103501716-cd500380-4e2d-11eb-8139-65201d731444.jpg)
+
+<img src="https://user-images.githubusercontent.com/58445878/103501716-cd500380-4e2d-11eb-8139-65201d731444.jpg" width="600">
+
 Next, using the outputs of the encoder and clusterizing then, the results were improved. Remembering that we used 5-folds cross-validation while training the autoencoders, the same 5 encoders were used here. This way, the new accurecy for the clusterization, testing the five encoders, was 87.22600 % with standard deviation equal to 3.13242 %. The two confusion matrix below show the results of the clusterization of the outputs of 2 of the 5 encoders.
 
-![confusionMatrix_encodedImage_CNN_0](https://user-images.githubusercontent.com/58445878/103501970-94fcf500-4e2e-11eb-8c87-a1cad7d894b7.jpg)
+<img src="https://user-images.githubusercontent.com/58445878/103501970-94fcf500-4e2e-11eb-8c87-a1cad7d894b7.jpg" width="600">
 
-![confusionMatrix_encodedImage_CNN_1](https://user-images.githubusercontent.com/58445878/103502006-acd47900-4e2e-11eb-9004-22be10bf261e.jpg)
-
+<img src="https://user-images.githubusercontent.com/58445878/103502006-acd47900-4e2e-11eb-9004-22be10bf261e.jpg" width="600">
 
 Last, also considering the 5-folds cross-validation while traing the deep clustering models, the accuracy for the clusterization with the deep model was 93.47000 %, with standard deviation equal to 4.35613 %. The confusion matrix below show the results founded when training the deep clustering model with 2 of the 5 pre trained encoders.
 
 
-![confusioMatrix_KerasDeepClusteringModel_0](https://user-images.githubusercontent.com/58445878/103502142-12286a00-4e2f-11eb-8614-cbfa0cc44f8c.jpg)
+<img src="https://user-images.githubusercontent.com/58445878/103502142-12286a00-4e2f-11eb-8614-cbfa0cc44f8c.jpg" width="600">
 
-![confusioMatrix_KerasDeepClusteringModel_0](https://user-images.githubusercontent.com/58445878/103502146-15235a80-4e2f-11eb-88a7-30b4064040c5.png)
+<img src="https://user-images.githubusercontent.com/58445878/103502146-15235a80-4e2f-11eb-88a7-30b4064040c5.png" width="600">
+
 
 ## Steps Concluded and Future Works
 

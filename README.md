@@ -17,9 +17,8 @@ As the autoencoder model was trained with 5-folds cross-validation, the 5 models
 
 ## About the Deep Clustering Model
 The clustering layer used was developed by Chengwei Zhang and copied from his public repository ([Keras_Deep_Clustering](https://github.com/Tony607/Keras_Deep_Clustering)).<br/>
-In both examples, the models were trained with backpropagation using Adam  algorithm.<br/>
-The training was performed for 100 epochs with batch size = 32.<br/>
-The loss used while training the model with CIFAR-10 was a combination of mean squared error and cosine similarity (multiplied by minus 1). And the loss used while training the model with MNIST was the mean squared error.
+The encoder used in the deep clustering model trained with the MNIST dataset was the one trained with the same dataset in the project from my respository ([autoencoder](https://github.com/luizamarnet/autoencoder)). The outpout of this encoder is an array of size 10x1.<br/>
+
 
 
 ## Models

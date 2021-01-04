@@ -7,7 +7,7 @@ The models trained in the 'autoencoder' repository will be used in this project.
 
 The models were developed in Python using Keras.<br/>
 The models were validated using 5-folds cross-validation and all of them were tested on the same dataset.<br/>
-As examples, we trained the autoencoder with 2 datasets: CIFAR-10 and MNIST.<br/>
+The models will be trained with 2 datasets: CIFAR-10 and MNIST.<br/>
 For each dataset three steps will be carried out.
 * The images will be flattened and clusterized using k-means;
 * Each image will be inserted into the encoder derived from the autoendores of the other project. The output of the encoder will be clustered using k-means. <br/>

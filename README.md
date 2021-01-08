@@ -41,7 +41,7 @@ Last, also considering the 5-folds cross-validation while traing the deep cluste
 
 <img src="https://user-images.githubusercontent.com/58445878/103502142-12286a00-4e2f-11eb-8614-cbfa0cc44f8c.jpg" width="600">
 
-<img src="https://user-images.githubusercontent.com/58445878/103502146-15235a80-4e2f-11eb-88a7-30b4064040c5.png" width="600">
+<img src="https://user-images.githubusercontent.com/58445878/103975164-42834780-5152-11eb-9bbe-ea2cf1209dcf.jpg" width="600">
 
 
 ## Steps Concluded and Future Works

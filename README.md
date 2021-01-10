@@ -13,7 +13,7 @@ For each dataset three steps will be carried out.
 * Each image will be inserted into the encoder derived from the autoendores of the other project. And the output of the encoder will be clustered using k-means. <br/>
 * A clustering layer will be placed on the top of the encoder model and the new model will be trained as a self supervised model. This is the deep clusterinig model that we want to train. <br/>
 
-As the autoencoder model was trained with 5-folds cross-validation, the 5 models will be used here. This way, the clusterization using the outpout of the encoder will be done 5 times and 5 deep clustering models will be traied. Moreover, the training part of each clusterization will be caried out with the respective subsets used in the traing of each autoendor during the cross-validation, and the same subset of images will be used as test dataset. Hence, the tests realized and the comparison between the models are fair.
+As the autoencoder model was trained with 5-folds cross-validation, the 5 models will be used here. This way, the clusterization using the output of the encoder will be done 5 times and 5 deep clustering models will be trained. Moreover, the training part of each clusterization will be carried out with the respective subsets used in the training of each autoencodor during the cross-validation, and the same subset of images will be used as test dataset. Hence, the tests realized and the comparison between the models are fair.
 
 ## About the Deep Clustering Model
 The clustering layer used was developed by Chengwei Zhang and copied from his public repository ([Keras_Deep_Clustering](https://github.com/Tony607/Keras_Deep_Clustering)). <br/>

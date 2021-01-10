@@ -16,8 +16,8 @@ For each dataset three steps will be carried out.
 As the autoencoder model was trained with 5-folds cross-validation, the 5 models will be used here. This way, the clusterization using the outpout of the encoder will be done 5 times and 5 deep clustering models will be traied. Moreover, the training part of each clusterization will be caried out with the respective subsets used in the traing of each autoendor during the cross-validation, and the same subset of images will be used as test dataset. Hence, the tests realized and the comparison between the models are fair.
 
 ## About the Deep Clustering Model
-The clustering layer used was developed by Chengwei Zhang and copied from his public repository ([Keras_Deep_Clustering](https://github.com/Tony607/Keras_Deep_Clustering)). The 'metrics.py' code, used during training also was downloaded from the Zhang's repository.<br/>
-The encoder used in the deep clustering model trained with the MNIST dataset was the one trained with the same dataset in the project from my respository ([autoencoder](https://github.com/luizamarnet/autoencoder)). The output of this encoder is an array of size 10x1.<br/>
+The clustering layer used was developed by Chengwei Zhang and copied from his public repository ([Keras_Deep_Clustering](https://github.com/Tony607/Keras_Deep_Clustering)). <br/>
+The encoder used in the deep clustering model trained with the MNIST dataset was the one that was trained with the same dataset in the project from my [autoencoder](https://github.com/luizamarnet/autoencoder) repository. The output of this encoder is an array of size 10x1.<br/>
 As expalined by [Chengwei Zhang](https://www.dlology.com/blog/how-to-do-unsupervised-clustering-with-keras/), the clustering layer calculates the probability that each sample belongs to each cluster using  student's t-distribution. To do this, the weights that connect the clustering layer with the encoder output layer are used as centers of the clusters. The authors idea for this layer was inspired by the t-SNE algorithm by Laurens van der Maaten and Geoffrey Hinton presented in the article 'Visualizing Data using t-SNE'.<br/>
 Also, the labels used while training the deep clustering are updated after some iterations, updating the target distribution. For this reason the model is called self supervised.<br/>
 
@@ -30,18 +30,19 @@ The confusion matrix above shows the true labels against the clusterization resu
 
 <img src="https://user-images.githubusercontent.com/58445878/103501716-cd500380-4e2d-11eb-8139-65201d731444.jpg" width="600">
 
-Next, using the outputs of the encoder and clusterizing then, the result were improved. Remembering that, since we used 5-folds cross-validation while training the autoencoders, the same respective 5 encoders were used here. This way, the new accuracy for the clusterization, testing the five encoders, was 87.22600 % with standard deviation equal to 3.13242 %. The two confusion matrix below show the results of the clusterization of the outputs of 2 of the 5 encoders.
+Next, using the outputs of the encoder and clusterizing then, the result were improved. Remembering that, since we used 5-folds cross-validation while training the autoencoders, the same respective 5 encoders were used here. This way, the new accuracy for the clusterization, testing the five encoders, was 88.24000 % with standard deviation equal to 2.52979 %. The two confusion matrix below show the results of the clusterization of the outputs of 2 of the 5 encoders.
 
-<img src="https://user-images.githubusercontent.com/58445878/103501970-94fcf500-4e2e-11eb-8c87-a1cad7d894b7.jpg" width="600">
+<img src="https://user-images.githubusercontent.com/58445878/104114187-41802080-52e0-11eb-973e-6aa196e7caf2.jpg" width="600">
 
-<img src="https://user-images.githubusercontent.com/58445878/103502006-acd47900-4e2e-11eb-9004-22be10bf261e.jpg" width="600">
+<img src="https://user-images.githubusercontent.com/58445878/104114188-447b1100-52e0-11eb-94cc-2fb806c21a1d.jpg" width="600">
 
-Last, also considering the 5-folds cross-validation while traing the deep clustering models, the accuracy for the clusterization with the deep model was 93.47000 %, with standard deviation equal to 4.35613 %. The confusion matrix below show the results founded when training the deep clustering model with 2 of the 5 pretrained encoders.
+Last, also considering the 5-folds cross-validation while traing the deep clustering models, the accuracy for the clusterization with the deep model was 93.49000 %, with standard deviation equal to 4.39761 %. The confusion matrix below show the results founded when training the deep clustering model with 2 of the 5 pretrained encoders.
 
 
-<img src="https://user-images.githubusercontent.com/58445878/103502142-12286a00-4e2f-11eb-8614-cbfa0cc44f8c.jpg" width="600">
+<img src="https://user-images.githubusercontent.com/58445878/104114203-6c6a7480-52e0-11eb-90ec-451f1bffeff9.jpg" width="600">
 
-<img src="https://user-images.githubusercontent.com/58445878/103975164-42834780-5152-11eb-9bbe-ea2cf1209dcf.jpg" width="600">
+<img src="https://user-images.githubusercontent.com/58445878/104114206-6ffdfb80-52e0-11eb-828a-84e2d947ebb6.jpg" width="600">
+
 
 
 ## Steps Concluded and Future Works

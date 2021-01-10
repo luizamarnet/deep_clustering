@@ -5,7 +5,7 @@ The models trained in the [autoencoder](https://github.com/luizamarnet/autoencod
 
 ## About the Project
 
-The models were developed in Python using Keras.<br/>
+The models were developed in Python using Keras and scikit-learn.<br/>
 The models were validated using 5-folds cross-validation and all of them were tested on the same dataset.<br/>
 The models will be trained with 2 datasets: CIFAR-10 and MNIST.<br/>
 For each dataset three steps will be carried out.
@@ -17,8 +17,8 @@ As the autoencoder model was trained with 5-folds cross-validation, the 5 models
 
 ## About the Deep Clustering Model
 The clustering layer used was developed by Chengwei Zhang and copied from his public repository ([Keras_Deep_Clustering](https://github.com/Tony607/Keras_Deep_Clustering)). The 'metrics.py' code, used during training also was downloaded from the Zhang's repository.<br/>
-The encoder used in the deep clustering model trained with the MNIST dataset was the one trained with the same dataset in the project from my respository ([autoencoder](https://github.com/luizamarnet/autoencoder)). The outpout of this encoder is an array of size 10x1.<br/>
-As expalined by [Chengwei Zhang](https://www.dlology.com/blog/how-to-do-unsupervised-clustering-with-keras/), the clustering layer calculates the probability that each sample belongs to each cluster using  student's t-distribution. To do this, the weights that connect the clustering layer with the encoder output layer are used as center clusters. <br/>
+The encoder used in the deep clustering model trained with the MNIST dataset was the one trained with the same dataset in the project from my respository ([autoencoder](https://github.com/luizamarnet/autoencoder)). The output of this encoder is an array of size 10x1.<br/>
+As expalined by [Chengwei Zhang](https://www.dlology.com/blog/how-to-do-unsupervised-clustering-with-keras/), the clustering layer calculates the probability that each sample belongs to each cluster using  student's t-distribution. To do this, the weights that connect the clustering layer with the encoder output layer are used as centers of the clusters. The authors idea for this layer was inspired by the t-SNE algorithm by Laurens van der Maaten and Geoffrey Hinton presented in the article 'Visualizing Data using t-SNE'.<br/>
 Also, the labels used while training the deep clustering are updated after some iterations, updating the target distribution. For this reason the model is called self supervised.<br/>
 
 

@@ -5,7 +5,7 @@ The models trained in the [autoencoder](https://github.com/luizamarnet/autoencod
 
 ## About the Project
 
-The models were developed in Python using Keras.<br/>
+The models were developed in Python using Keras and scikit-learn.<br/>
 The models were validated using 5-folds cross-validation and all of them were tested on the same dataset.<br/>
 The models will be trained with 2 datasets: CIFAR-10 and MNIST.<br/>
 For each dataset three steps will be carried out.

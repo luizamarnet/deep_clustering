@@ -49,7 +49,7 @@ Last, also considering the 5-folds cross-validation while traing the deep cluste
 
 - [x] To cluster the MNIST dataset flattening the images and applying k-means;
 - [x] To compress the MNIST dataset images using the encoders trained and to cluster their outputs applying k-means;
-- [x] To trai the deep clustering model using the MNIST dataset;
+- [x] To train the deep clustering model using the MNIST dataset;
 - [ ] To cluster the CIFAR-10 dataset flattening the images and applying k-means;
 - [ ] To compress the CIFAR-10 dataset images using the encoders trained and to cluster the outputs applying k-means;
 - [ ] To train the deep clustering model using the CIFAR-10 dataset.

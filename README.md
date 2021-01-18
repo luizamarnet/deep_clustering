@@ -30,13 +30,13 @@ The confusion matrix below shows the true labels against the clusters resulted f
 
 <img src="https://user-images.githubusercontent.com/58445878/103501716-cd500380-4e2d-11eb-8139-65201d731444.jpg" width="600">
 
-Next, using the outputs of the encoder and clusterizing then, the result were improved. Remembering that, since we used 5-folds cross-validation while training the autoencoders, the same respective 5 encoders were used here. This way, the new accuracy for the clusterization, testing the five encoders, was 88.24000 % with standard deviation equal to 2.52979 %. The two confusion matrix below show the results of the clusterization of the outputs of 2 of the 5 encoders.
+Next, using the outputs of the encoder and clusterizing then, the result were improved. Remembering that, since we used 5-folds cross-validation while training the autoencoders, the same respective 5 encoders were used here. This way, the new accuracy for the clusterization, testing the five encoders, was 88.24000 % with standard deviation equal to 2.52979 %. The two confusion matrices below show the results of the clusterization of the outputs of 2 of the 5 encoders.
 
 <img src="https://user-images.githubusercontent.com/58445878/104114187-41802080-52e0-11eb-973e-6aa196e7caf2.jpg" width="600">
 
 <img src="https://user-images.githubusercontent.com/58445878/104114188-447b1100-52e0-11eb-94cc-2fb806c21a1d.jpg" width="600">
 
-Last, also considering the 5-folds cross-validation while traing the deep clustering models, the accuracy for the clusterization with the deep model was 93.49000 %, with standard deviation equal to 4.39761 %. The confusion matrix below show the results founded when training the deep clustering model with 2 of the 5 pretrained encoders.
+Last, also considering the 5-folds cross-validation while traing the deep clustering models, the accuracy for the clusterization with the deep model was 93.49000 %, with standard deviation equal to 4.39761 %. The confusion matrices below show the results for training the deep clustering model with 2 of the 5 pretrained encoders.
 
 
 <img src="https://user-images.githubusercontent.com/58445878/104114203-6c6a7480-52e0-11eb-90ec-451f1bffeff9.jpg" width="600">

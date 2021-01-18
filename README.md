@@ -26,7 +26,7 @@ Also, the labels used while training the deep clustering model are updated after
 
 Up to now, only the MNIST dataset was used in this project. The results obtained until now are presented below.<br/>
 Although the true labels of the classes are not used during any part of the training, once it is a cluserization problem, they are used to avaliate the results and analyse if the models are able to separete the clusters according to the known classes. <br/>
-The confusion matrix below shows the true labels against the clusters resulted from flattening the image and apply k-means. Considering the class of each cluster as the majority class of the cluster, the accuracy obtained for the test dataset was: 59.41000 %.
+The confusion matrix below shows the true labels against the clusters resulted from flattening the image and applying k-means. Considering the class of each cluster as the majority class of the cluster, the accuracy obtained for the test dataset was: 59.41000 %.
 
 <img src="https://user-images.githubusercontent.com/58445878/103501716-cd500380-4e2d-11eb-8139-65201d731444.jpg" width="600">
 
